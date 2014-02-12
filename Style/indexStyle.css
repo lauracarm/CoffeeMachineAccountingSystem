@@ -54,7 +54,7 @@ input {
 	font-size: 14px;
 }
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=email] {
 	margin: 5px;
 	padding: 0 10px;
 	width: 200px;
@@ -66,6 +66,7 @@ input[type=text], input[type=password] {
 	border-radius: 2px;
 	outline: 5px solid #eff4f7;
 }
+
 
 input[type=submit] {
 	padding: 0 18px;
@@ -82,7 +83,7 @@ input[type=submit] {
 	outline: 0;
 }
 
-.Register {
+.Form {
 	position: relative;
 	margin: 0 auto;
 	padding: 20px 20px 20px;
@@ -90,10 +91,10 @@ input[type=submit] {
 	border-radius: 3px;
 }
 
-.Register p.submit {
+.Form p.submit {
 	text-align: right;
 }
 
-.Register input[type=text], .Register input[type=password] {
+.Form input[type=text], .Form input[type=password], .Form input[type=email] {
 	width: 278px;
 }
