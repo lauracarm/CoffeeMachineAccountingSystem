@@ -22,11 +22,10 @@ body {
 	position: relative;
 	margin: 0 auto;
 	padding: 20px 20px 20px;
-	width: 310px;
+	width: 300px;
 	background: #FFFFFF;
 	border-radius: 3px;
 }
-
 
 .login input[type=text], .login input[type=password] {
 	width: 278px;
@@ -83,3 +82,18 @@ input[type=submit] {
 	outline: 0;
 }
 
+.Register {
+	position: relative;
+	margin: 0 auto;
+	padding: 20px 20px 20px;
+	width: 300px;
+	border-radius: 3px;
+}
+
+.Register p.submit {
+	text-align: right;
+}
+
+.Register input[type=text], .Register input[type=password] {
+	width: 278px;
+}
