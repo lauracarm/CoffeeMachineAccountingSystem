@@ -1,0 +1,67 @@
+<?php
+	$username = "root";
+	$password = "";
+	$hostname = "localhost";
+	
+	$dbhandle = mysql_connect($hostname, $username, $password) or die("Could not connect to database");
+	
+	$selected = mysql_select_db("login", $dbhandle);
+
+		if(isset($_POST['username']) && isset($_POST['password'])){
+			$username = $_POST['username'];
+			$password = md5($_POST['password']);
+			$name = $_POST['name'];
+			$surname = $_POST['surname'];
+			$email = $_POST['email'];
+
+			$query = mysql_query("SELECT * FROM users WHERE Username='$username'");
+			if(mysql_num_rows($query) > 0 ) { //check if there is already an entry for that username
+				echo "Username already exists!";
+			}else{
+				mysql_query("INSERT INTO users (Username, Password, Name, Surname, Email) VALUES ('$username', '$password' , '$name' , '$surname' , '$email')");
+				header("location:index.php");
+			}		
+	}
+
+	mysql_close();
+?>
+<html>
+	<head>
+
+		<title>Register</title>
+		<link rel="stylesheet" href="Style/indexStyle.css">
+	</head>
+	<body>
+		<section class ="container">
+			<div class="header">
+
+			</div>
+			<div class="Form">
+				<form method="post" action="register.php">
+					<p>
+						<input id="name" type="text" name="name" value="" placeholder="First Name">
+					</p>
+					<p>
+						<input id = "surname" type="text" name="surname" value="" placeholder="Surname">
+					</p>
+					<p>
+						<input id="emailAddress" type="email" name="email" value="" placeholder="Email">
+					</p>
+					<p>
+						<input id="user" type="text" name="username" value="" placeholder="Enter Username">
+					</p>
+					<p>
+						<input id="createPassword" type="password" name="password" value="" placeholder="Enter password">
+					</p>
+					<p>
+						<input id="reenterPassword" type="password" name="password1" value="" placeholder="Re-Enter password">
+					</p>
+					<p class="submit">
+						<input type="submit" name="commit" value="Submit" />
+					</p>
+				</form>
+			</div>
+
+		</section>
+	</body>
+</html>

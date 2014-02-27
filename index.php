@@ -13,9 +13,9 @@
 			<img src="images/logo.png" alt="Welcome Coffee Cup Logo">	
 			</div>
 			<div class="login">
-				<form method="post" action="index.html">
+				<form action="login.php" method="post">
 					<p>
-						<input id="username" type="text" name="login" value="" placeholder="Username or Email">
+						<input id="username" type="text" name="username" value="" placeholder="Username or Email">
 					</p>
 					<p>
 						<input id = "password" type="password" name="password" value="" placeholder="Password">
@@ -23,12 +23,13 @@
 					<p class="submit">
 						<input type="submit" name="commit" value="login" />
 					</p>
+					<?php if (!empty($_GET["loginFailed"])) echo "Incorrect login details. Please try again."; ?>
 				</form>
 			</div>
 
 			<div class="login-help">
 				<p>
-				<a href="ForgotLogin.html"> Forgot your password?</a> <a href="register.html"> Not a member? Sign up here.</a>
+				<a href="ForgotLogin.html"> Forgot your password?</a> <a href="register.php"> Not a member? Sign up here.</a>
 				</p>
 			</div>
 		</section>
