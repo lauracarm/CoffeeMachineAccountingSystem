@@ -29,7 +29,7 @@
 
 			<div class="login-help">
 				<p>
-				<a href="ForgotLogin.html"> Forgot your password?</a> <a href="register.php"> Not a member? Sign up here.</a>
+				<a href="ForgotLogin.php"> Forgot your password?</a> <a href="register.php"> Not a member? Sign up here.</a>
 				</p>
 			</div>
 		</section>
