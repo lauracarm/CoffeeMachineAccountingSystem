@@ -18,15 +18,15 @@
 		<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" width=100%/>
 		<title>Register</title>
-		<link rel="stylesheet" href="Style/indexStyle.css">
+		<link rel="stylesheet" href="Style/style.css">
 	</head>
 	<body>
 		<section class ="container">
-			<div class="header" style="font-size: 30px; font-weight: bold; padding-left: 10px;">
+			<div class="head">
 			Forgot Login?
 			</div>
 			<div class="Form">
-				<p>Enter email address to recieve an email reminder of your password.</p>
+				<p style="text-align: center">Enter email address to recieve an email reminder of your password.</p>
 				<form method="post" action="index.html">
 					
 					<p>

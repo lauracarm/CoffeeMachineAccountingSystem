@@ -16,8 +16,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
 	$query = mysql_query("SELECT * FROM users WHERE Username='$username'");
 	if (mysql_num_rows($query) > 0) {//check if there is already an entry for that username
-		die(header("location:register.php?userExists=true&reason=username_already_exists"));
-		;
+		die(header("location:register.php?userExists=true&reason=username_already_exists")); ;
 	} else {
 		if (!empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['name']) && !empty($_POST['surname']) && !empty($_POST['email'])) {
 			mysql_query("INSERT INTO users (Username, Password, Name, Surname, Email) VALUES ('$username', '$password' , '$name' , '$surname' , '$email')");
@@ -34,11 +33,11 @@ mysql_close();
 	<head>
 
 		<title>Register</title>
-		<link rel="stylesheet" href="Style/indexStyle.css">
+		<link rel="stylesheet" href="Style/style.css">
 	</head>
 	<body>
 		<section class ="container">
-			<div class="header" style="font-size: 30px; font-weight: bold; padding-left: 10px;">
+			<div class="head">
 				Register
 			</div>
 			<div class="Form">
@@ -49,8 +48,8 @@ mysql_close();
 							echo "Please ensure all fields are filled in.";
 						?>
 						<?php
-							if (!empty($_GET["userExists"]))
-								echo "Username already exists. Please select a differet Username.";
+						if (!empty($_GET["userExists"]))
+							echo "Username already exists. Please select a differet Username.";
 						?>
 						<input id="name" type="text" name="name" value="" placeholder="First Name">
 					</p>

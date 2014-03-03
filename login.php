@@ -17,7 +17,7 @@ $count = mysql_num_rows($result);
 mysql_close();
 
 if ($count == 1) {
-	header("location:login_success.php");
+	header("location:home.php");
 } else {
 	die(header("location:index.php?loginFailed=true&reason=incorrect_details"));
 	;

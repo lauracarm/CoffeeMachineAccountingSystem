@@ -49,6 +49,10 @@ body {
 	text-decoration: underline;
 }
 
+.RadioButton {
+	padding-left: 300px;
+}
+
 input {
 	font-family: 'Lucida Grande', Tahoma, Verdana, sans-serif;
 	font-size: 14px;

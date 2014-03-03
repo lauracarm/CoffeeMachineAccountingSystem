@@ -1,0 +1,177 @@
+body {
+	font: 13px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
+	color: #404040;
+	background: #CCFFFF;
+	margin: 0px;
+	text-align:center;
+}
+
+.nav {
+	position: relative;
+	margin: 20px 0;
+	font: 20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
+	font-weight: bold;
+}
+
+.nav ul {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+.nav li {
+	margin: 0 5px 10px 0;
+	padding: 0;
+	list-style: none;
+	display: inline-block;
+}
+
+.nav a {
+	padding: 3px 12px;
+	text-decoration: none;
+	color: #666699;
+	line-height: 100%;
+}
+
+.nav a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+.container {
+	margin-top: 5%;
+}
+
+.head {
+	position: relative;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 30px; 
+	font-weight: bold;
+}
+
+.login-help {	
+	font-size: 11px;
+	color: white;
+	text-align: center;
+	position: relative;
+	margin: 0 auto;
+}
+.login-help a {
+	color: #000000;
+	text-decoration: none;
+}
+.login-help a:hover {
+	text-decoration: underline;
+}
+
+table {
+	padding: 0;
+	padding-top:100px;
+	border-spacing: 50px 10px;
+}
+
+table.center {
+	margin-left:auto; 
+    margin-right:auto;
+}
+
+
+input {
+	font-family: 'Lucida Grande', Tahoma, Verdana, sans-serif;
+	font-size: 14px;
+}
+
+input[type=text], input[type=password], input[type=email] {
+	margin: 2%;
+	width: 25%;
+	height: 40px;
+	color: #404040;
+	background: white;
+	border: solid;
+	border-color: #eff4f7;
+	border-radius: 2px;
+	outline: 5px solid #eff4f7;
+}
+
+input[type=submit] {
+	height: 40px;
+	width: 35%;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+	text-shadow: 0 1px #e3f1f1;
+	background: #cde5ef;
+	border: solid;
+	border-color: #eff4f7;
+
+}
+
+.Form {
+	position: relative;
+	margin: 0 auto;
+	padding: 20px 20px 20px;
+	width: 300px;
+	border-radius: 3px;
+}
+
+.Form p.submit {
+	text-align: center;
+}
+
+.Form input[type=text], .Form input[type=password], .Form input[type=email] {
+	width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+	.nav {
+		position: relative;
+		min-height: 100px;
+		margin: 0px;
+		font: 15px 'Lucida Grande', Tahoma, Verdana, sans-serif;
+		font-weight: bold;
+	}	
+	.nav ul {
+		width: 100%;
+		padding: 15px 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: url("images/menu-icon.png") no-repeat 10px 11px;
+		min-height: 100%;
+		border-radius: 5px;
+		
+	}
+	.nav li {
+		display: none; /* hide all <li> items */
+		margin: 0;
+	}
+	.nav .current {
+		display: block; /* show only current <li> item */
+	}
+	.nav a {
+		display: block;
+		padding: 5px 5px 5px 32px;
+		text-align: left;
+	}
+	.nav .current a {
+		background: none;
+		color: #666;
+	}
+
+	/* on nav hover */
+	.nav ul:hover {
+		background-image: none;
+	}
+	.nav ul:hover li {
+		display: block;
+		margin: 0 0 5px;
+	}
+	.nav ul:hover .current {
+		background: url(images/icon-check.png) no-repeat 10px 7px;
+	}
+
+	
+}
+
+
